@@ -38,11 +38,11 @@ def coupon(grocery_Cost: float) -> float:
      """
      if (grocery_Cost > 210):
           return round(grocery_Cost * 0.14,2)
-     elif ((grocery_Cost > 150) and (grocery_Cost < 210)):
+     elif ((grocery_Cost > 150) and (grocery_Cost <= 210)):
           return round(grocery_Cost * 0.12,2)
-     elif ((grocery_Cost > 60) and (grocery_Cost < 150)):
+     elif ((grocery_Cost > 60) and (grocery_Cost <= 150)):
           return round(grocery_Cost * 0.10,2)
-     elif ((grocery_Cost > 10) and (grocery_Cost < 60)):
+     elif ((grocery_Cost >= 10) and (grocery_Cost <= 60)):
           return round(grocery_Cost * 0.8,2)
      else:
           return grocery_Cost * 0
@@ -81,7 +81,7 @@ def squirrel_play(is_Summer: bool, temperature: int) -> bool:
      True
      """
      if (((is_Summer == False) and (temperature >= 60) and (temperature <= 90))
-         or ((is_Summer == True) and (temperature >= 60) and (temperature < 100)
+         or ((is_Summer == True) and (temperature >= 60) and (temperature <= 100)
              )):     
           return True
      else:
@@ -100,7 +100,8 @@ def great_42(a: int, b: int) -> bool:
      """  
      a = abs(a)
      b = abs(b)
-     if (a == 42 or b == 42 or ((b - a) == 42) or ((b - a) == 42)):
+     if (a == 42 or b == 42 or ((b - a) == 42) or ((a - b) == 42) 
+         or ((a + b) == 42)):
           return True
      else:
           return False
